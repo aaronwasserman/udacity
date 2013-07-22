@@ -13,7 +13,7 @@ body {
 	font-size: 13px;
 	color: gray;
 	position: absolute;
-	top: 10px;
+	top: 15px;
 	right: 10px;
 }
 
@@ -38,6 +38,14 @@ h2 {
 
 .error {
 	color: red;
+}
+
+table {
+    border-spacing: 5px;
+}
+
+td {
+    text-align: right;
 }
 
 label {
@@ -77,10 +85,6 @@ input[type=submit] {
 	text-decoration: none;
 }
 
-.post + .post {
-	margin-top: 15px;
-}
-
 .post-heading {
 	position: relative;
 	border-bottom: 3px solid #666;
@@ -94,14 +98,10 @@ input[type=submit] {
 	color: #333;
 }
 
-.post-title:visisted {
-	color: #333;
-}
-
 .post-date {
 	position: absolute;
-	right: 0px;
-	bottom: 0px;
+	right: 0;
+	bottom: 0;
 	color: #999;
 
 }
@@ -112,16 +112,16 @@ input[type=submit] {
 
 .age {
 	position: absolute;
-	bottom: 0px;
-	right: 0px;
+	bottom: 0;
+	right: 0;
 	color: gray;
 	font-size: 12px;
 }
 
 .json {
 	position: absolute;
-	bottom: 0px;
-	left: 0px;
+	bottom: 0;
+	left: 0;
 	color: gray;
 	font-size: 12px;
 }

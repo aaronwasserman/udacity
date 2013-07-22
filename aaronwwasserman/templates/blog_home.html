@@ -8,18 +8,31 @@
 	<body>
 		<a href="/" class="main-title">Aaron's Blog</a>
 		
-		<div class="login-area">
-			<a href="/signup" class="login-link">Sign Up</a> 
-			| 
-			<a href="/login" class="login-link">Login</a>
-		</div>
+		{% if user %}
+
+            <div class="login-area">
+                <a href="/newpost" class="login-link">New Post</a>
+                |
+                <a href="/logout" class="login-link">Logout ({{ user.username }})</a>
+            </div>
+
+        {% else %}
+
+            <div class="login-area">
+                <a href="/signup" class="login-link">Sign Up</a>
+                |
+                <a href="/login" class="login-link">Login</a>
+            </div>
+
+        {% endif %}
 		
-		<div class="content">
+
+        <div class="content">
 		{% for blog in front_page %}
 			<div class="post">
 				<div class="post-heading">
-					<a class="post-title" href="/{{blog.key().id()}}">{{blog.subject}}</a>
-					<div class="post-date">{{blog.created.strftime('%b %d, %Y - %I:%M %p')}}</div>
+					<a class="post-title" href="/{{ blog.key().id() }}">{{ blog.subject }}</a>
+					<div class="post-date">{{ blog.author }} - {{ blog.created.strftime('%b %d, %Y - %I:%M %p') }}</div>
 				</div>
 				<div class="post-content">{{blog.content}}</div>
 			</div>

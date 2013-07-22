@@ -14,24 +14,37 @@
 		
 		<form method="post">		
 			
-			<table cellspacing="5">
+			<table>
 				<tr>
-					<td align="right"><label>Username:</label></td>
-					<td><input type="text" name="username" value="{{username}}"></td>
+					<td>
+                        <label>Username:
+                            <td><input type="text" name="username" value="{{username}}"></td>
+                        </label>
+                    </td>
 					<td class="error">{{username_error}}</td>
 				</tr>
 				<tr>
-					<td align="right"><label>Password:</label></td>
-					<td><input type="password" name="password"></td>
+					<td>
+                        <label>Password:
+                            <td><input type="password" name="password"></td>
+                        </label>
+                    </td>
 					<td class="error">{{password_error}}</td>
 				</tr>
-					<td align="right"><label>Verify Password:</label></td>
-					<td><input type="password" name="verify"></td>
+                <tr>
+					<td>
+                        <label>Verify Password:
+                            <td><input type="password" name="verify"></td>
+                        </label>
+                    </td>
 					<td class="error">{{verify_error}}</td>
-				<tr>
 				</tr>
-					<td align="right"><label>Email (optional):</label></td>
-					<td><input type="text" name="email" value="{{email}}"></td>
+				<tr>
+					<td>
+                        <label>Email (optional):
+                            <td><input type="text" name="email" value="{{email}}"></td>
+                        </label>
+                    </td>
 					<td class="error">{{email_error}}</td>
 				</tr>		
 			</table>
