@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Aaron's Blog - Sign Up</title>
+		<link type="text/css" rel="stylesheet" href="/stylesheets/blog.css" />
+	</head>
+	
+	<body>
+		<a href="/" class="main-title">Aaron's Blog</a>
+		
+		<div class="login-area"><a href="/login" class="login-link">Login</a></div>
+		
+		<h2>Create Account</h2>
+		
+		<form method="post">		
+			
+			<table cellspacing="5">
+				<tr>
+					<td align="right"><label>Username:</label></td>
+					<td><input type="text" name="username" value="{{username}}"></td>
+					<td class="error">{{username_error}}</td>
+				</tr>
+				<tr>
+					<td align="right"><label>Password:</label></td>
+					<td><input type="password" name="password"></td>
+					<td class="error">{{password_error}}</td>
+				</tr>
+					<td align="right"><label>Verify Password:</label></td>
+					<td><input type="password" name="verify"></td>
+					<td class="error">{{verify_error}}</td>
+				<tr>
+				</tr>
+					<td align="right"><label>Email (optional):</label></td>
+					<td><input type="text" name="email" value="{{email}}"></td>
+					<td class="error">{{email_error}}</td>
+				</tr>		
+			</table>
+			
+			<br>
+			<input class="input" type="submit">					
+			
+		</form>
+	</body>
+</html>
+
+
+
+

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Aaron's Blog - New Post</title>
+		<link type="text/css" rel="stylesheet" href="/stylesheets/blog.css" />
+	</head>
+	
+	<body>
+		<a href="/" class="main-title">Aaron's Blog</a>
+		
+		<div class="login-area"><a href="/logout" class="login-link">Logout</a></div>
+		
+		<h2>New Post</h2>
+		
+		<form method="post">		
+		
+			<label>subject</label>
+			<input type="text" name="subject" value="{{subject}}">
+			
+			<br><br>
+		
+			<label>blog</label>
+			<textarea name="content">{{content}}</textarea>
+			<br>
+			
+			<div class="error">{{newpost_error}}</div>
+			<br>
+						
+			<input class="input" type="submit">					
+			
+		</form>
+	</body>
+</html>

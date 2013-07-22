@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Aaron's Blog - Login</title>
+		<link type="text/css" rel="stylesheet" href="/stylesheets/blog.css" />
+	</head>
+	
+	<body>
+		<a href="/" class="main-title">Aaron's Blog</a>
+		
+		<div class="login-area"><a href="/signup" class="login-link">Sign Up</a></div>
+		
+		<h2>Login</h2>
+		
+		<form method="post">		
+			
+			<table cellspacing="5">
+				<tr>
+					<td align="right"><label>Username:</label></td>
+					<td><input type="text" name="username" value="{{username}}"></td>
+				</tr>
+				<tr>
+					<td align="right"><label>Password:</label></td>
+					<td><input type="password" name="password"></td>
+				</tr>
+			</table>
+			<br>
+			<div class="error">{{login_error}}</div> 
+			<br>
+			<input class="input" type="submit">					
+			
+		</form>
+	</body>
+</html>
+
+
+
+
