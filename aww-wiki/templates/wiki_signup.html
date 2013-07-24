@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+{% autoescape true %}
+<html>
+	<head>
+		<title>Wikiwasserman</title>
+		<link type="text/css" rel="stylesheet" href="/stylesheets/wiki.css" />
+	</head>
+	
+	<body>
+		<a href="/" class="main-title">WikiWasserman</a>
+		
+		<div class="login-area"><a href="/login" class="login-link">login</a></div>
+		
+		<h2>Create Account</h2>
+		
+		<form method="post">		
+			
+			<table>
+				<tr>
+					<td>
+                        <label>Username:
+                            <td><input type="text" name="username" value="{{username}}"></td>
+                        </label>
+                    </td>
+					<td class="error">{{username_error}}</td>
+				</tr>
+				<tr>
+					<td>
+                        <label>Password:
+                            <td><input type="password" name="password"></td>
+                        </label>
+                    </td>
+					<td class="error">{{password_error}}</td>
+				</tr>
+                <tr>
+					<td>
+                        <label>Verify Password:
+                            <td><input type="password" name="verify"></td>
+                        </label>
+                    </td>
+					<td class="error">{{verify_error}}</td>
+				</tr>
+				<tr>
+					<td>
+                        <label>Email (optional):
+                            <td><input type="text" name="email" value="{{email}}"></td>
+                        </label>
+                    </td>
+					<td class="error">{{email_error}}</td>
+				</tr>		
+			</table>
+			
+			<br>
+			<input class="input" type="submit">					
+			
+		</form>
+	</body>
+{% endautoescape %}
+</html>
+
+
+
+

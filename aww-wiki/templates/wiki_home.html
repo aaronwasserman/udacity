@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+{% autoescape true %}
+<html>
+	<head>
+		<title>Wikiwasserman</title>
+		<link type="text/css" rel="stylesheet" href="/stylesheets/wiki.css" />
+	</head>
+
+	<body>
+        <div class="login-area">
+            {% if user %}
+                <a href={{ "/_edit" + path }} class="login-link">edit</a>
+                |
+                <a href={{ '/_history' + path }} class="login-link">history</a>
+
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                <a href={{ '/logout' + path }} class="login-link">logout ({{ user.username }})</a>
+
+            {% else %}
+
+                <a href={{ '/_history' + path }} class="login-link">history</a>
+
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                <a href="/login" class="login-link">login</a>
+                |
+                <a href="/signup" class="login-link">sign up</a>
+
+            {% endif %}
+        </div>
+
+        <div class="wiki-content">
+            {% autoescape false %}
+                {{ content }}
+            {% endautoescape %}
+        </div>
+
+	</body>
+{% endautoescape %}
+</html>
+
+
+
+
+
+
+
+

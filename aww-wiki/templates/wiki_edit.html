@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+{% autoescape true %}
+<html>
+	<head>
+		<title>Wikiwasserman</title>
+		<link type="text/css" rel="stylesheet" href="/stylesheets/wiki.css" />
+	</head>
+
+	<body>
+            <div class="login-area">
+                <a href={{ path }} class="login-link">view</a>
+                |
+                <a href={{ '/_history' + path }} class="login-link">history</a>
+
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                <a href={{ '/logout' + path }} class="login-link">logout ({{ username }})</a>
+            </div>
+
+            <form method="post">
+                <textarea name="content">{{ content }}</textarea>
+                <br>
+
+                <label class="error">{{ post_error }}</label>
+                <br>
+
+                <input class="input" type="submit" value="Save">
+            </form>
+
+            {% if version %}
+                <div class="wiki-version">editing v: {{ version }}</div>
+            {% endif %}
+	</body>
+</html>
+{% endautoescape %}
+
+
+
+
+
+
+

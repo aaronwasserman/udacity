@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+{% autoescape true %}
+<html>
+	<head>
+		<title>Wikiwasserman</title>
+		<link type="text/css" rel="stylesheet" href="/stylesheets/wiki.css" />
+	</head>
+
+	<body>
+        <div class="login-area">
+            {% if user %}
+                <a href="/_edit{{ path }}" class="login-link">edit</a>
+                |
+                <a href="{{ path }}" class="login-link">view</a>
+
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                <a href="/logout{{ path }}" class="login-link">logout ({{ user.username }})</a>
+
+            {% else %}
+
+                <a href="{{ path }}" class="login-link">View</a>
+
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                <a href="/login" class="login-link">Login</a>
+                |
+                <a href="/signup" class="login-link">Sign Up</a>
+
+            {% endif %}
+        </div>
+
+        <table class="history">
+            {% for wiki in history %}
+                <tr class="history">
+                    <td>
+                        {{ wiki.author }} (v{{ wiki.version }})
+                    </td>
+                    <td>
+                        {{ wiki.created.strftime('%a %m/%d/%y') }}
+                    </td>
+                    <td>
+                        {{ wiki.content }}
+                    </td>
+                    <td>
+                        <a href="/_edit{{ path }}?v={{ wiki.version }}" class="login-link">edit</a>
+                        &nbsp;
+                        <a href="{{ path }}?v={{ wiki.version }}" class="login-link">view</a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </table>
+
+
+	</body>
+{% endautoescape %}
+</html>
+
+
+
+
+
+
+
+
